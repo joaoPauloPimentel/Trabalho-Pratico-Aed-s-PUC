@@ -11,19 +11,10 @@ namespace  Trabalho_Pratico_Aeds
         public string Naipe { get;}
 
 
-        public Carta(int numero)
+        public Carta(int numero, string naipe)
         {
-            Numero = numero;
-            
-        }
-
-
-
-
-
-
-
-
-        
+        Numero = numero;
+        Naipe = naipe;
+        }   
     }
 }
