@@ -1,96 +1,120 @@
-﻿using Trabalho_Pratico_Aeds;
-int valorMinimo = 0;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-bool eh = false;
-int j;
-Jogador jogador = null;
-int[] cimiterio = new int[12];
-bool repetei = true;
-Random random = new Random();
-string repete = "s";
-while (repete == "s")
+namespace Trabalho_Pratico_Aeds
 {
-    Console.WriteLine("quantos jogadores vão jogar ?");
-    int index = int.Parse(Console.ReadLine());
-
-    List<Jogador> jogadors = new List<Jogador>();
-
-    for (int i = 0; i < index; i++)
+    class Program
     {
-        Console.WriteLine($"Jogador {i + 1}, digite seu nome:");
-        jogadors.Add(new Jogador(Console.ReadLine()));
-    }
-    Console.WriteLine("Quantas cartas terá no monte ?");
-    int quantCartas = int.Parse(Console.ReadLine());
-    Stack<Carta> cartas = new Stack<Carta>();
-    for (int i = 0; i < quantCartas; i++)
-    {
-        cartas.Push(new Carta(random.Next(1, 13)));
-    }
-
-    while (cartas.Count > 0)
-    {
-        for (int i = 0; i < index; i++)
+        static void Main(string[] args)
         {
-            if(cartas.Count == 0 ){
-                    break;
+            int valorMinimo = 0;
+            bool repetei = true;
+            Random random = new Random();
+            string repete = "s";
 
-                } 
-
-            while (repetei)
+            while (repete == "s")
             {
-                if(cartas.Count == 0 ){
-                    break;
+                Console.WriteLine("Quantos jogadores vão jogar?");
+                int index = int.Parse(Console.ReadLine());
 
-                }
-                Carta carta = cartas.Pop();
-                for (j = 0; j < index; j++)
+                List<Jogador> jogadors = new List<Jogador>();
+
+                for (int i = 0; i < index; i++)
                 {
-                    if (carta.Numero == jogadors[j].pilhaPrincipal.Peek().Numero && jogadors[j].pilhaPrincipal.Count > valorMinimo)
-                    {
-                        jogador = jogadors[j];
-                        eh = true;
+                    Console.WriteLine($"Jogador {i + 1}, digite seu nome:");
+                    jogadors.Add(new Jogador(Console.ReadLine()));
+                }
 
+                Console.WriteLine("Quantas cartas terá no monte?");
+                int quantCartas = int.Parse(Console.ReadLine());
+
+                Stack<Carta> cartas = new Stack<Carta>();
+                
+                for (int i = 0; i < quantCartas; i++)
+                {
+                    cartas.Push(new Carta(random.Next(1, 14))); 
+                }
+
+                List<Carta> areaDescarte = new List<Carta>(); 
+
+                
+                while (cartas.Count > 0)
+                {
+                    foreach (var jogador in jogadors)
+                    {
+                        if (cartas.Count == 0)
+                            break;
+
+                        Carta cartaDaVez = cartas.Pop();
+                        Console.WriteLine($"{jogador.Nome} retirou a carta {cartaDaVez.Numero}");
+
+                        
+                        Jogador jogadorRoubar = null;
+                        foreach (var outroJogador in jogadors)
+                        {
+                            if (outroJogador != jogador && outroJogador.pilhaPrincipal.Count > 0 && cartaDaVez.Numero == outroJogador.pilhaPrincipal.Peek().Numero)
+                            {
+                                if (jogadorRoubar == null || outroJogador.pilhaPrincipal.Count > jogadorRoubar.pilhaPrincipal.Count)
+                                {
+                                    jogadorRoubar = outroJogador;
+                                }
+                            }
+                        }
+
+                        if (jogadorRoubar != null)
+                        {
+                            jogador.Roubar(jogadorRoubar);
+                            jogador.pilhaPrincipal.Push(cartaDaVez); 
+                            Console.WriteLine($"{jogador.Nome} roubou o monte de {jogadorRoubar.Nome}");
+                            continue; 
+                        }
+
+                        
+                        var cartaNaDescarte = areaDescarte.FirstOrDefault(c => c.Numero == cartaDaVez.Numero);
+                        if (cartaNaDescarte != null)
+                        {
+                            jogador.pilhaPrincipal.Push(cartaDaVez); 
+                            areaDescarte.Remove(cartaNaDescarte); 
+                            Console.WriteLine($"{jogador.Nome} pegou a carta {cartaDaVez.Numero} da área de descarte");
+                            continue;
+                        }
+
+                        
+                        if (jogador.pilhaPrincipal.Count > 0 && jogador.pilhaPrincipal.Peek().Numero == cartaDaVez.Numero)
+                        {
+                            jogador.pilhaPrincipal.Push(cartaDaVez); 
+                            Console.WriteLine($"{jogador.Nome} colocou a carta {cartaDaVez.Numero} no topo do seu monte");
+                            continue;
+                        }
+
+                        
+                        areaDescarte.Add(cartaDaVez);
+                        Console.WriteLine($"{jogador.Nome} descartou a carta {cartaDaVez.Numero}");
                     }
                 }
-                if (eh && jogador != null)
-                {
-                    jogadors[i].Roubar(jogador);
-                }
-                else if (cimiterio[carta.Numero - 1] != 0)
-                {
-                    jogadors[i].pilhaPrincipal.Push(carta);
-                    jogadors[i].pilhaPrincipal.Push(carta);
-                    cimiterio[carta.Numero - 1]--;
-                }
-                else if (carta.Numero == jogadors[i].pilhaPrincipal.Peek().Numero)
-                {
-                    jogadors[i].pilhaPrincipal.Push(carta);
-                }
-                else
-                {
-                    cimiterio[carta.Numero - 1]++;
-                    repetei = false;
-                }
-                eh = false;
-                jogador = null;
 
+                
+                Jogador vencedor = jogadors.OrderByDescending(j => j.QuantidadeCartas).First();
+                Console.WriteLine($"O vencedor é {vencedor.Nome} com {vencedor.QuantidadeCartas} cartas!");
+
+                
+                for (int i = 0; i < jogadors.Count; i++)
+                {
+                    jogadors[i].AdicionarRanking(i + 1);
+                }
+
+                
+                Console.WriteLine("Ranking da partida:");
+                foreach (var jogador in jogadors.OrderBy(j => j.QuantidadeCartas))
+                {
+                    Console.WriteLine($"{jogador.Nome} - {jogador.QuantidadeCartas} cartas");
+                }
+
+                
+                Console.WriteLine("Deseja jogar novamente? (s/n)");
+                repete = Console.ReadLine();
             }
-
-
-
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-    repete = Console.ReadLine();
 }
