@@ -19,13 +19,13 @@ namespace  Trabalho_Pratico_Aeds
             if (randomNumero == 0){
                 Naipe = "Espadas";
             }
-            else if (randomNumero == 0){
+            else if (randomNumero == 1){
                 Naipe = "Paus";
             }
-            else if (randomNumero == 0){
+            else if (randomNumero == 2){
                 Naipe = "Copas";
             }
-            else if (randomNumero == 0){
+            else if (randomNumero == 3){
                 Naipe = "Ouros";
             }
             

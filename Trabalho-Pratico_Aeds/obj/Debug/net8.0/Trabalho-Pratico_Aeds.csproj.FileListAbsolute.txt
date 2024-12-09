@@ -1,0 +1,15 @@
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\bin\Debug\net8.0\Trabalho-Pratico_Aeds.exe
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\bin\Debug\net8.0\Trabalho-Pratico_Aeds.deps.json
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\bin\Debug\net8.0\Trabalho-Pratico_Aeds.runtimeconfig.json
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\bin\Debug\net8.0\Trabalho-Pratico_Aeds.dll
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\bin\Debug\net8.0\Trabalho-Pratico_Aeds.pdb
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\Trabalho-Pratico_Aeds.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\Trabalho-Pratico_Aeds.AssemblyInfoInputs.cache
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\Trabalho-Pratico_Aeds.AssemblyInfo.cs
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\Trabalho-Pratico_Aeds.csproj.CoreCompileInputs.cache
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\Trabalho-Pratico_Aeds.sourcelink.json
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\Trabalho-Pratico_Aeds.dll
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\refint\Trabalho-Pratico_Aeds.dll
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\Trabalho-Pratico_Aeds.pdb
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\Trabalho-Pratico_Aeds.genruntimeconfig.cache
+C:\Users\batat\OneDrive\Documentos\GitHub\Trabalho-Pratico-Aed-s-PUC\Trabalho-Pratico_Aeds\obj\Debug\net8.0\ref\Trabalho-Pratico_Aeds.dll
