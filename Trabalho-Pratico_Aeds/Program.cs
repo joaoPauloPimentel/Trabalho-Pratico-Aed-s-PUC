@@ -1,10 +1,9 @@
 ﻿using Trabalho_Pratico_Aeds;
 int valorMinimo = 0;
-
 bool eh = false;
 int j;
 Jogador jogador = null;
-int[] cimiterio = new int[12];
+int[] cemiterio = new int[12];
 bool repetei = true;
 Random random = new Random();
 string repete = "s";
@@ -32,6 +31,8 @@ while (repete == "s")
     {
         for (int i = 0; i < index; i++)
         {
+            Console.WriteLine($"Vez do jogador {jogadors[i]._Nome}");
+
             if(cartas.Count == 0 ){
                     break;
 
@@ -44,32 +45,39 @@ while (repete == "s")
 
                 }
                 Carta carta = cartas.Pop();
+                Console.WriteLine($"jogador {jogadors[i]._Nome} pegou a carta {carta.Numero}");
                 for (j = 0; j < index; j++)
                 {
                     if (carta.Numero == jogadors[j].pilhaPrincipal.Peek().Numero && jogadors[j].pilhaPrincipal.Count > valorMinimo)
                     {
                         jogador = jogadors[j];
                         eh = true;
-
                     }
                 }
                 if (eh && jogador != null)
                 {
+                    Console.WriteLine($"jogador {jogadors[i]._Nome} roubou todas as {jogador.pilhaPrincipal.Count} de Jogador {jogador._Nome}"); 
                     jogadors[i].Roubar(jogador);
+                    Console.WriteLine($"jogador {jogadors[i]._Nome} pode jogar mais uma vez");
                 }
-                else if (cimiterio[carta.Numero - 1] != 0)
+                else if (cemiterio[carta.Numero - 1] != 0)
                 {
+                    Console.WriteLine($"jogador {jogadors[i]._Nome} Pegou uma carta do cemiterio");
                     jogadors[i].pilhaPrincipal.Push(carta);
                     jogadors[i].pilhaPrincipal.Push(carta);
-                    cimiterio[carta.Numero - 1]--;
+                    cemiterio[carta.Numero - 1]--;
+                    Console.WriteLine($"jogador {jogadors[i]._Nome} pode jogar mais uma vez");
                 }
                 else if (carta.Numero == jogadors[i].pilhaPrincipal.Peek().Numero)
                 {
+                    Console.WriteLine($"jogador {jogadors[i]._Nome} pode jogar mais uma vez");
                     jogadors[i].pilhaPrincipal.Push(carta);
+                    Console.WriteLine($"jogador {jogadors[i]._Nome} pode jogar mais uma vez");
                 }
                 else
                 {
-                    cimiterio[carta.Numero - 1]++;
+                    Console.WriteLine($"jogador {jogadors[i]._Nome} adicionou a carta {carta.Numero} ao cemiterio e perdeu a vez");
+                    cemiterio[carta.Numero - 1]++;
                     repetei = false;
                 }
                 eh = false;

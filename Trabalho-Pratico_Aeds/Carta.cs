@@ -13,7 +13,23 @@ namespace  Trabalho_Pratico_Aeds
 
         public Carta(int numero)
         {
+            Random rd = new Random();
             Numero = numero;
+            int randomNumero = rd.Next(0,5);
+            if (randomNumero == 0){
+                Naipe = "Espadas";
+            }
+            else if (randomNumero == 0){
+                Naipe = "Paus";
+            }
+            else if (randomNumero == 0){
+                Naipe = "Copas";
+            }
+            else if (randomNumero == 0){
+                Naipe = "Ouros";
+            }
+            
+
             
         }
 

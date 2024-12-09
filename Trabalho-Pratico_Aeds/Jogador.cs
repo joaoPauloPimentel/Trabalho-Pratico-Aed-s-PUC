@@ -8,8 +8,15 @@ namespace Trabalho_Pratico_Aeds
 {
     public class Jogador
     {
-        private string Nome { get; }
+        private string nome;
         private int Posicao { get; set; }
+        private string Nome;
+        public string _Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+        
 
         public Stack<Carta> pilhaPrincipal = new Stack<Carta>();
 
