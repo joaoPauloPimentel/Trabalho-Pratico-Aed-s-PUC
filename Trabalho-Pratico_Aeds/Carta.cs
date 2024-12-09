@@ -11,7 +11,7 @@ namespace  Trabalho_Pratico_Aeds
         public string Naipe { get;}
 
 
-        public Carta(int numero, string naipe)
+        public Carta(int numero, string naipe = "naipe")
         {
         Numero = numero;
         Naipe = naipe;
