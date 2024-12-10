@@ -1,0 +1,126 @@
+quantos jogadores vão jogar?
+Jogador 1, digite seu nome:
+Jogador 2, digite seu nome:
+Quantas cartas terá no monte ?
+Vez do jogador pedro  
+jogador pedro adiciona a sua primeira carta 7 a sua pilha e encerra a jogada 
+Vez do jogador joao  
+jogador joao adiciona a sua primeira carta 12 a sua pilha e encerra a jogada 
+Vez do jogador pedro  
+jogador pedro pegou a carta 10  
+jogador pedro adicionou a carta 10 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 5  
+jogador joao adicionou a carta 5 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro pegou a carta 11  
+jogador pedro adicionou a carta 11 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 4  
+jogador joao adicionou a carta 4 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro pegou a carta 11  
+jogador pedro Pegou uma carta do cemiterio 
+jogador pedro pode jogar mais uma vez  
+jogador pedro pegou a carta 4  
+jogador pedro Pegou uma carta do cemiterio 
+jogador pedro pode jogar mais uma vez  
+jogador pedro pegou a carta 2  
+jogador pedro adicionou a carta 2 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 12  
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 12  
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 5  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 8  
+jogador joao adicionou a carta 8 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro pegou a carta 10  
+jogador pedro Pegou uma carta do cemiterio 
+jogador pedro pode jogar mais uma vez  
+jogador pedro pegou a carta 11  
+jogador pedro adicionou a carta 11 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 3  
+jogador joao adicionou a carta 3 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro pegou a carta 6  
+jogador pedro adicionou a carta 6 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 4  
+jogador joao adicionou a carta 4 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro pegou a carta 4  
+jogador pedro Pegou uma carta do cemiterio 
+jogador pedro pode jogar mais uma vez  
+jogador pedro pegou a carta 1  
+jogador pedro adicionou a carta 1 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 5  
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 6  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 2  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 1  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 7  
+jogador joao adicionou a carta 7 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro pegou a carta 8  
+jogador pedro Pegou uma carta do cemiterio 
+jogador pedro pode jogar mais uma vez  
+jogador pedro pegou a carta 4  
+jogador pedro adicionou a carta 4 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 2  
+jogador joao adicionou a carta 2 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro pegou a carta 5  
+jogador pedro adicionou a carta 5 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 1  
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 3  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 9  
+jogador joao adicionou a carta 9 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro pegou a carta 1  
+jogador pedro adicionou a carta 1 ao cemiterio e perdeu a vez  
+Vez do jogador joao  
+jogador joao pegou a carta 9  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 1  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 2  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 8  
+jogador joao roubou todas as 11 cartas de Jogador pedro  
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 5  
+jogador joao Pegou uma carta do cemiterio 
+jogador joao pode jogar mais uma vez  
+jogador joao pegou a carta 1  
+jogador joao adicionou a carta 1 ao cemiterio e perdeu a vez  
+Vez do jogador pedro  
+jogador pedro adiciona a sua primeira carta 10 a sua pilha e encerra a jogada 
+Vez do jogador joao  
+O vencedor é joao com 34 cartas! 
+ 
+pedro - 1 cartas 
+
+joao - 34 cartas 
+
+Deseja jogar novamente? (s/n) 
+
