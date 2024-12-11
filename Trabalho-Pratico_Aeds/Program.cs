@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualBasic;
 using Trabalho_Pratico_Aeds;
 int valorMinimo = 0;
-bool eh = false;
+bool podeRoubar = false;
 int j;
-Jogador jogador = null;
+Jogador jogadorQueVaiSerRoubado = null;
 string LogdoJogo = "";
 int[] cemiterio = new int[12];
-bool repetei = true;
+bool jogaMaisUmaVez = true;
 Random random = new Random();
 List<string> strings = new List<string>();
 string repete = "s";
@@ -45,8 +45,8 @@ while (repete == "s")
             if(cartas.Count == 0 ){
                     break;
                 } 
-            repetei = true;
-            while (repetei)
+            jogaMaisUmaVez = true;
+            while (jogaMaisUmaVez)
             {
                 if(cartas.Count == 0 ){
                     break;
@@ -57,9 +57,9 @@ while (repete == "s")
                     jogadors[i].pilhaPrincipal.Push(carta);
                     strings.Add($"jogador {jogadors[i]._Nome} adiciona a sua primeira carta {carta.Numero} a sua pilha e encerra a jogada ");
                     Console.WriteLine($"jogador {jogadors[i]._Nome} adiciona a sua primeira carta {carta.Numero} a sua pilha e encerra a jogada");
-                    repetei = false;
-                    eh = false;
-                    jogador = null;
+                    jogaMaisUmaVez = false;
+                    podeRoubar = false;
+                    jogadorQueVaiSerRoubado = null;
                     continue;
                     
                 }
@@ -70,15 +70,15 @@ while (repete == "s")
                     
                     if ( jogadors[j].pilhaPrincipal.Count != 0 && carta.Numero == jogadors[j].pilhaPrincipal.Peek().Numero  && jogadors[j].pilhaPrincipal.Count > valorMinimo && jogadors[j]._Nome != jogadors[i]._Nome )
                     {
-                        jogador = jogadors[j];
-                        eh = true;
+                        jogadorQueVaiSerRoubado = jogadors[j];
+                        podeRoubar = true;
                     }
                 }
-                if (eh && jogador != null)
+                if (podeRoubar && jogadorQueVaiSerRoubado != null)
                 {
-                    strings.Add($"jogador {jogadors[i]._Nome} roubou todas as {jogador.pilhaPrincipal.Count} cartas de Jogador {jogador._Nome}  ");
-                    Console.WriteLine($"jogador {jogadors[i]._Nome} roubou todas as {jogador.pilhaPrincipal.Count} cartas de Jogador {jogador._Nome}"); 
-                    jogadors[i].Roubar(jogador);
+                    strings.Add($"jogador {jogadors[i]._Nome} roubou todas as {jogadorQueVaiSerRoubado.pilhaPrincipal.Count} cartas de Jogador {jogadorQueVaiSerRoubado._Nome}  ");
+                    Console.WriteLine($"jogador {jogadors[i]._Nome} roubou todas as {jogadorQueVaiSerRoubado.pilhaPrincipal.Count} cartas de Jogador {jogadorQueVaiSerRoubado._Nome}"); 
+                    jogadors[i].Roubar(jogadorQueVaiSerRoubado);
                     strings.Add($"jogador {jogadors[i]._Nome} pode jogar mais uma vez  ");
                     Console.WriteLine($"jogador {jogadors[i]._Nome} pode jogar mais uma vez");
                 }
@@ -103,10 +103,10 @@ while (repete == "s")
                     strings.Add($"jogador {jogadors[i]._Nome} adicionou a carta {carta.Numero} ao cemiterio e perdeu a vez  ");
                     Console.WriteLine($"jogador {jogadors[i]._Nome} adicionou a carta {carta.Numero} ao cemiterio e perdeu a vez");
                     cemiterio[carta.Numero - 1]++;
-                    repetei = false;
+                    jogaMaisUmaVez = false;
                 }
-                eh = false;
-                jogador = null;
+                podeRoubar = false;
+                jogadorQueVaiSerRoubado = null;
             }
         }
     }

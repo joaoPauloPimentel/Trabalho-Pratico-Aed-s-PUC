@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Trabalho-Pratico_Aeds")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+263767c26ca0cb8060af160b976f87d00552b7f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73db2b9dc8cf18d8cab58849a1e14b54c1b08562")]
 [assembly: System.Reflection.AssemblyProductAttribute("Trabalho-Pratico_Aeds")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Trabalho-Pratico_Aeds")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
